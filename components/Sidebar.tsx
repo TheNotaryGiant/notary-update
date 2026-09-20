@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   useEffect,
   useLayoutEffect,
@@ -32,8 +32,19 @@ function activeHrefFromLocation(pathname: string, hash: string) {
   return "/";
 }
 
+function isModifiedClick(event: MouseEvent<HTMLAnchorElement>) {
+  return (
+    event.metaKey ||
+    event.ctrlKey ||
+    event.shiftKey ||
+    event.altKey ||
+    event.button !== 0
+  );
+}
+
 export function Sidebar() {
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   const [activeHref, setActiveHref] = useState<string | null>(() =>
     pathname === "/contact" ? "/contact" : pathname === "/" ? "/" : null,
@@ -89,21 +100,48 @@ export function Sidebar() {
   const goTo = (href: string) => {
     setActiveHref(href);
     setOpen(false);
+
+    if (href === "/") {
+      if (pathname === "/") {
+        window.history.pushState(null, "", "/");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+      router.push("/");
+      return;
+    }
+
+    const hash = href.includes("#") ? href.slice(href.indexOf("#") + 1) : "";
+    if (hash) {
+      if (pathname === "/") {
+        window.history.pushState(null, "", href);
+        document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
+        return;
+      }
+      router.push(href);
+      return;
+    }
+
+    router.push(href);
   };
 
-  const onHomeClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    goTo("/");
-    if (pathname === "/") {
-      event.preventDefault();
-      window.history.pushState(null, "", "/");
-      window.scrollTo({ top: 0, behavior: "smooth" });
+  const onNavClick = (
+    event: MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    if (isModifiedClick(event)) {
+      setOpen(false);
+      return;
     }
+
+    event.preventDefault();
+    goTo(href);
   };
 
   return (
     <>
       <header className="mobile-bar">
-        <Link href="/" className="site-logo" onClick={onHomeClick}>
+        <Link href="/" className="site-logo" onClick={(event) => onNavClick(event, "/")}>
           <img src={media.logo} alt={site.name} width={56} height={56} />
         </Link>
         <button
@@ -124,7 +162,11 @@ export function Sidebar() {
       />
 
       <aside id="site-sidebar" className="sidebar">
-        <Link href="/" className="site-logo sidebar__brand" onClick={onHomeClick}>
+        <Link
+          href="/"
+          className="site-logo sidebar__brand"
+          onClick={(event) => onNavClick(event, "/")}
+        >
           <img src={media.logo} alt="" width={72} height={72} />
           <span>
             <strong>{site.name}</strong>
@@ -144,50 +186,17 @@ export function Sidebar() {
           />
           {nav.map((item) => {
             const active = activeHref === item.href;
-            const className = active ? "is-active" : undefined;
-            const ariaCurrent = active ? ("page" as const) : undefined;
-            const bindRef = (node: HTMLAnchorElement | null) => {
-              itemRefs.current[item.href] = node;
-            };
-
-            if (item.href === "/") {
-              return (
-                <Link
-                  key={item.href}
-                  href="/"
-                  ref={bindRef}
-                  className={className}
-                  aria-current={ariaCurrent}
-                  onClick={onHomeClick}
-                >
-                  {item.label}
-                </Link>
-              );
-            }
-
-            if (item.href.includes("#")) {
-              return (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  ref={bindRef}
-                  className={className}
-                  aria-current={ariaCurrent}
-                  onClick={() => goTo(item.href)}
-                >
-                  {item.label}
-                </a>
-              );
-            }
 
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                ref={bindRef}
-                className={className}
-                aria-current={ariaCurrent}
-                onClick={() => goTo(item.href)}
+                ref={(node) => {
+                  itemRefs.current[item.href] = node;
+                }}
+                className={active ? "is-active" : undefined}
+                aria-current={active ? "page" : undefined}
+                onClick={(event) => onNavClick(event, item.href)}
               >
                 {item.label}
               </Link>

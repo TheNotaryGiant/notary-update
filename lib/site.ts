@@ -15,8 +15,18 @@ export const media = {
   favicon: "/media/u-6oPFyWnEWRE5RkZ8PK1g_NotaryGiant_facicon_144.png",
   heroStamp:
     "/media/fru9WZwkv0-rYQkMRE5Cnw_Notary public at work signing documents.png",
+  bookingPortrait: "/media/b9_JN-jfsEWrr-QQKATX4A_1image.png",
   star: "/media/star.svg",
 } as const;
+
+export const inquiryServices = [
+  "Notary services",
+  "Mobile notary",
+  "Apostille assistance",
+  "Loan signings",
+  "Signature witnessing",
+  "Other",
+] as const;
 
 export const nav = [
   { label: "Overview", href: "/" },

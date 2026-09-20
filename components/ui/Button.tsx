@@ -23,7 +23,7 @@ type ButtonProps = {
 };
 
 const defaults: Record<ButtonIntent, string | undefined> = {
-  book: "/#book",
+  book: "/contact#form",
   call: site.phoneTel,
   learn: undefined,
   quiet: undefined,
