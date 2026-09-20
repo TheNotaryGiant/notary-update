@@ -1,0 +1,28 @@
+export const site = {
+  name: "The Notary Giant®",
+  legalName: "The Notary Giant Professional Service Corporation",
+  phoneDisplay: "(646) 423-6350",
+  phoneTel: "tel:+16464236350",
+  email: "ojbien-aime@thenotarygiant.com",
+  location: "New York, New York, United States",
+  hours: "Mon – Fri, 9am – 5pm",
+} as const;
+
+export const media = {
+  logo: "/media/5sJ5dYOSMkad0ZPJSyuREA_The_Notary_Giant_BIMI.svg",
+  lockup:
+    "/media/UMeqEvrkOESUsSav_sYK0w_NotaryGiant_lockup_black_white_lg.png",
+  favicon: "/media/u-6oPFyWnEWRE5RkZ8PK1g_NotaryGiant_facicon_144.png",
+  heroStamp:
+    "/media/fru9WZwkv0-rYQkMRE5Cnw_Notary public at work signing documents.png",
+  star: "/media/star.svg",
+} as const;
+
+export const nav = [
+  { label: "Overview", href: "/" },
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Reviews", href: "/#reviews" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/contact" },
+] as const;

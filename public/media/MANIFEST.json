@@ -1,0 +1,134 @@
+﻿[
+    {
+        "url":  "https://assets.voolt.com/iphone-frame.png",
+        "file":  "iphone-frame.png",
+        "bytes":  0,
+        "status":  "FAIL The remote server returned an error: (403) Forbidden."
+    },
+    {
+        "url":  "https://assets.voolt.com/Production/w-12013/5sJ5dYOSMkad0ZPJSyuREA_The_Notary_Giant_BIMI.svg",
+        "file":  "5sJ5dYOSMkad0ZPJSyuREA_The_Notary_Giant_BIMI.svg",
+        "bytes":  93018,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://assets.voolt.com/Production/w-12013/b9_JN-jfsEWrr-QQKATX4A_1image.png",
+        "file":  "b9_JN-jfsEWrr-QQKATX4A_1image.png",
+        "bytes":  2192347,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://assets.voolt.com/Production/w-12013/fru9WZwkv0-rYQkMRE5Cnw_Notary public at work signing documents.png",
+        "file":  "fru9WZwkv0-rYQkMRE5Cnw_Notary public at work signing documents.png",
+        "bytes":  1568299,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://assets.voolt.com/Production/w-12013/gPI_8L9xokyIljb5lfTXZw_Oswald at the office.png",
+        "file":  "gPI_8L9xokyIljb5lfTXZw_Oswald at the office.png",
+        "bytes":  1984827,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://assets.voolt.com/Production/w-12013/mx6qUnHYgUCuEA4VHsCofg_TNG Upper right-16_9.png",
+        "file":  "mx6qUnHYgUCuEA4VHsCofg_TNG Upper right-16_9.png",
+        "bytes":  1028755,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://assets.voolt.com/Production/w-12013/qg967zLkNkGYRbUoXX2RQw_Professional Notary Signing Consultation.png",
+        "file":  "qg967zLkNkGYRbUoXX2RQw_Professional Notary Signing Consultation.png",
+        "bytes":  2071935,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://assets.voolt.com/Production/w-12013/rWiK0yoMHE6LnBOV1vfzdg_desk.jpg",
+        "file":  "rWiK0yoMHE6LnBOV1vfzdg_desk.jpg",
+        "bytes":  141145,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://assets.voolt.com/Production/w-12013/u-6oPFyWnEWRE5RkZ8PK1g_NotaryGiant_facicon_144.png",
+        "file":  "u-6oPFyWnEWRE5RkZ8PK1g_NotaryGiant_facicon_144.png",
+        "bytes":  23969,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://assets.voolt.com/Production/w-12013/uClw_dZQS0uI5U1KFML3cA_Apostille Consultation in the Executive Office.png",
+        "file":  "uClw_dZQS0uI5U1KFML3cA_Apostille Consultation in the Executive Office.png",
+        "bytes":  2186936,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://assets.voolt.com/Production/w-12013/UMeqEvrkOESUsSav_sYK0w_NotaryGiant_lockup_black_white_lg.png",
+        "file":  "UMeqEvrkOESUsSav_sYK0w_NotaryGiant_lockup_black_white_lg.png",
+        "bytes":  137548,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://assets.voolt.com/Production/w-12013/yEjm3izBRk-iFZhxL7UdSQ_Press Release pic.jpg",
+        "file":  "yEjm3izBRk-iFZhxL7UdSQ_Press Release pic.jpg",
+        "bytes":  121934,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://assets.voolt.com/sections/icon-holder.svg",
+        "file":  "icon-holder.svg",
+        "bytes":  1273,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://voolt-template-asset.b-cdn.net/assets/2023/06/28193927/badge-blue-locally-owned-circle2-1.svg",
+        "file":  "badge-blue-locally-owned-circle2-1.svg",
+        "bytes":  31504,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://voolt-template-asset.b-cdn.net/assets/2023/08/29200831/notary-public.services.svg",
+        "file":  "notary-public.services.svg",
+        "bytes":  1734,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://voolt-template-asset.b-cdn.net/u-15477/w-6345/cHdTvqruSUi8ARQeRJVzLg_google-logo.png",
+        "file":  "cHdTvqruSUi8ARQeRJVzLg_google-logo.png",
+        "bytes":  1519,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://voolt-template-asset.s3.amazonaws.com/check.svg",
+        "file":  "check.svg",
+        "bytes":  903,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://voolt-template-asset.s3.amazonaws.com/sections/staff-placeholder.png",
+        "file":  "staff-placeholder.png",
+        "bytes":  703,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://voolt-template-asset.s3.amazonaws.com/template-4/images/star.svg",
+        "file":  "star.svg",
+        "bytes":  848,
+        "status":  "exists"
+    },
+    {
+        "url":  "https://voolt-template-asset.s3.amazonaws.com/voolt-logo-dark.png",
+        "file":  "voolt-logo-dark.png",
+        "bytes":  4382,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://voolt-template-asset.s3.amazonaws.com/voolt-logo-light.png",
+        "file":  "voolt-logo-light.png",
+        "bytes":  3191,
+        "status":  "downloaded"
+    },
+    {
+        "url":  "https://www.thenotarygiant.com/safari-pinned-tab.svg",
+        "file":  "safari-pinned-tab.svg",
+        "bytes":  922,
+        "status":  "exists"
+    }
+]

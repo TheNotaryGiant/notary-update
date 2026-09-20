@@ -1,0 +1,114 @@
+{
+  "source": "https://www.thenotarygiant.com/",
+  "scrapedFrom": [
+    "https://api.voolt.com/api/public/websitev2/thenotarygiant.com/pages/home/?websitePageType=default",
+    "live HTML, CSS, and JS bundles"
+  ],
+  "note": "Original Voolt filenames kept. Sort later. Voolt bucket listing is blocked (403), so unused uploads not referenced on the live site cannot be listed.",
+  "owned": [
+    {
+      "file": "5sJ5dYOSMkad0ZPJSyuREA_The_Notary_Giant_BIMI.svg",
+      "role": "primary logo / BIMI seal",
+      "usedOn": ["header", "footer"]
+    },
+    {
+      "file": "UMeqEvrkOESUsSav_sYK0w_NotaryGiant_lockup_black_white_lg.png",
+      "role": "wordmark lockup / Open Graph image",
+      "usedOn": ["seo og:image"]
+    },
+    {
+      "file": "u-6oPFyWnEWRE5RkZ8PK1g_NotaryGiant_facicon_144.png",
+      "role": "favicon",
+      "usedOn": ["browser tab"]
+    },
+    {
+      "file": "safari-pinned-tab.svg",
+      "role": "Safari pinned tab icon",
+      "usedOn": ["head"]
+    },
+    {
+      "file": "fru9WZwkv0-rYQkMRE5Cnw_Notary public at work signing documents.png",
+      "role": "hero stamp photo",
+      "usedOn": ["homepage hero"]
+    },
+    {
+      "file": "b9_JN-jfsEWrr-QQKATX4A_1image.png",
+      "role": "booking / contact portrait",
+      "usedOn": ["homepage form", "contact"]
+    },
+    {
+      "file": "gPI_8L9xokyIljb5lfTXZw_Oswald at the office.png",
+      "role": "founder photo",
+      "usedOn": ["about"]
+    },
+    {
+      "file": "mx6qUnHYgUCuEA4VHsCofg_TNG Upper right-16_9.png",
+      "role": "trademark / brand mark",
+      "usedOn": ["trademark announcement"]
+    },
+    {
+      "file": "qg967zLkNkGYRbUoXX2RQw_Professional Notary Signing Consultation.png",
+      "role": "signature witnessing / notary services card",
+      "usedOn": ["services carousel"]
+    },
+    {
+      "file": "uClw_dZQS0uI5U1KFML3cA_Apostille Consultation in the Executive Office.png",
+      "role": "apostille services card",
+      "usedOn": ["services carousel"]
+    },
+    {
+      "file": "yEjm3izBRk-iFZhxL7UdSQ_Press Release pic.jpg",
+      "role": "newsroom / press",
+      "usedOn": ["services carousel"]
+    },
+    {
+      "file": "rWiK0yoMHE6LnBOV1vfzdg_desk.jpg",
+      "role": "credentials / desk",
+      "usedOn": ["services carousel"]
+    }
+  ],
+  "platformOrTemplate": [
+    {
+      "file": "badge-blue-locally-owned-circle2-1.svg",
+      "role": "locally owned badge"
+    },
+    {
+      "file": "star.svg",
+      "role": "5-star icon"
+    },
+    {
+      "file": "notary-public.services.svg",
+      "role": "default Voolt notary icon (inactive on live site)"
+    },
+    {
+      "file": "icon-holder.svg",
+      "role": "unused service icon placeholder"
+    },
+    {
+      "file": "check.svg",
+      "role": "template checkmark"
+    },
+    {
+      "file": "staff-placeholder.png",
+      "role": "template staff placeholder"
+    },
+    {
+      "file": "cHdTvqruSUi8ARQeRJVzLg_google-logo.png",
+      "role": "template Google logo"
+    },
+    {
+      "file": "voolt-logo-dark.png",
+      "role": "Voolt platform logo — do not use on owned site"
+    },
+    {
+      "file": "voolt-logo-light.png",
+      "role": "Voolt platform logo — do not use on owned site"
+    }
+  ],
+  "failed": [
+    {
+      "url": "https://assets.voolt.com/iphone-frame.png",
+      "reason": "403 Forbidden — platform chrome, not business media"
+    }
+  ]
+}
