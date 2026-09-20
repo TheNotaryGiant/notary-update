@@ -1,29 +1,111 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import {
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+  type MouseEvent,
+} from "react";
 import { Button } from "@/components/ui/Button";
 import { media, nav, site } from "@/lib/site";
+
+function activeHrefFromLocation(pathname: string, hash: string) {
+  if (pathname === "/contact" || pathname.startsWith("/contact/")) {
+    return "/contact";
+  }
+
+  if (pathname !== "/") {
+    return null;
+  }
+
+  const id = hash.replace(/^#/, "");
+  if (id) {
+    const match = nav.find((item) => item.href === `/#${id}`);
+    if (match) {
+      return match.href;
+    }
+  }
+
+  return "/";
+}
 
 export function Sidebar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [activeHref, setActiveHref] = useState<string | null>(() =>
+    pathname === "/contact" ? "/contact" : pathname === "/" ? "/" : null,
+  );
+  const navRef = useRef<HTMLElement>(null);
+  const itemRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
+  const [indicator, setIndicator] = useState({ y: 0, h: 0, on: false });
+
+  const syncFromLocation = () => {
+    setActiveHref(
+      activeHrefFromLocation(window.location.pathname, window.location.hash),
+    );
+  };
 
   useEffect(() => {
     setOpen(false);
+    syncFromLocation();
   }, [pathname]);
+
+  useEffect(() => {
+    window.addEventListener("hashchange", syncFromLocation);
+    window.addEventListener("popstate", syncFromLocation);
+    return () => {
+      window.removeEventListener("hashchange", syncFromLocation);
+      window.removeEventListener("popstate", syncFromLocation);
+    };
+  }, []);
 
   useEffect(() => {
     document.body.classList.toggle("nav-open", open);
     return () => document.body.classList.remove("nav-open");
   }, [open]);
 
+  useLayoutEffect(() => {
+    if (!activeHref) {
+      setIndicator((current) => ({ ...current, on: false }));
+      return;
+    }
+
+    const link = itemRefs.current[activeHref];
+    if (!link || !navRef.current) {
+      setIndicator((current) => ({ ...current, on: false }));
+      return;
+    }
+
+    setIndicator({
+      y: link.offsetTop,
+      h: link.offsetHeight,
+      on: true,
+    });
+  }, [activeHref, open]);
+
+  const goTo = (href: string) => {
+    setActiveHref(href);
+    setOpen(false);
+  };
+
+  const onHomeClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    goTo("/");
+    if (pathname === "/") {
+      event.preventDefault();
+      window.history.pushState(null, "", "/");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <header className="mobile-bar">
-        <a href="/" className="site-logo">
+        <Link href="/" className="site-logo" onClick={onHomeClick}>
           <img src={media.logo} alt={site.name} width={56} height={56} />
-        </a>
+        </Link>
         <button
           type="button"
           className="nav-toggle"
@@ -42,30 +124,73 @@ export function Sidebar() {
       />
 
       <aside id="site-sidebar" className="sidebar">
-        <a href="/" className="site-logo sidebar__brand">
+        <Link href="/" className="site-logo sidebar__brand" onClick={onHomeClick}>
           <img src={media.logo} alt="" width={72} height={72} />
           <span>
             <strong>{site.name}</strong>
             <em>NYC Notary</em>
           </span>
-        </a>
+        </Link>
 
-        <nav className="sidebar__nav" aria-label="Primary">
+        <nav className="sidebar__nav" aria-label="Primary" ref={navRef}>
+          <div
+            className="sidebar__indicator"
+            aria-hidden="true"
+            style={{
+              transform: `translateY(${indicator.y}px)`,
+              height: indicator.h,
+              opacity: indicator.on ? 1 : 0,
+            }}
+          />
           {nav.map((item) => {
-            const active =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname === item.href || pathname.startsWith(`${item.href}/`);
+            const active = activeHref === item.href;
+            const className = active ? "is-active" : undefined;
+            const ariaCurrent = active ? ("page" as const) : undefined;
+            const bindRef = (node: HTMLAnchorElement | null) => {
+              itemRefs.current[item.href] = node;
+            };
+
+            if (item.href === "/") {
+              return (
+                <Link
+                  key={item.href}
+                  href="/"
+                  ref={bindRef}
+                  className={className}
+                  aria-current={ariaCurrent}
+                  onClick={onHomeClick}
+                >
+                  {item.label}
+                </Link>
+              );
+            }
+
+            if (item.href.includes("#")) {
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  ref={bindRef}
+                  className={className}
+                  aria-current={ariaCurrent}
+                  onClick={() => goTo(item.href)}
+                >
+                  {item.label}
+                </a>
+              );
+            }
 
             return (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
-                className={active ? "is-active" : undefined}
-                onClick={() => setOpen(false)}
+                ref={bindRef}
+                className={className}
+                aria-current={ariaCurrent}
+                onClick={() => goTo(item.href)}
               >
                 {item.label}
-              </a>
+              </Link>
             );
           })}
         </nav>

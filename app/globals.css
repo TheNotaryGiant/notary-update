@@ -60,7 +60,9 @@ html {
     scroll-behavior: auto;
   }
 
-  .btn {
+  .btn,
+  .sidebar__indicator,
+  .sidebar__nav a {
     transition: none;
   }
 }
@@ -367,6 +369,7 @@ img {
 }
 
 .sidebar__nav {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
@@ -375,19 +378,39 @@ img {
   letter-spacing: 0.02em;
 }
 
+.sidebar__indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--ivory) 8%, transparent);
+  border-left: 2px solid var(--gold);
+  pointer-events: none;
+  transition:
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    height 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 180ms ease;
+}
+
 .sidebar__nav a {
+  position: relative;
+  z-index: 1;
   text-decoration: none;
   color: var(--ink-muted);
   padding: 0.55rem 0.7rem;
   border-radius: var(--radius);
   border-left: 2px solid transparent;
+  transition: color 280ms ease;
 }
 
 .sidebar__nav a:hover,
 .sidebar__nav a.is-active {
   color: var(--ivory);
+}
+
+.sidebar__nav a:hover:not(.is-active) {
   background: color-mix(in srgb, var(--ivory) 6%, transparent);
-  border-left-color: var(--gold);
 }
 
 .sidebar__actions {
