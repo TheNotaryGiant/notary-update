@@ -1,6 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { areaHubs, areaPath } from "@/lib/areas";
+import { pageMeta } from "@/lib/page-meta";
 import { media, site } from "@/lib/site";
+
+export const metadata: Metadata = pageMeta({
+  title: {
+    absolute: "Mobile Notary in NYC and Nassau | The Notary Giant®",
+  },
+  description:
+    "Commissioned New York notaries travel across NYC and Nassau County for acknowledgments, loan signings, and apostille document preparation.",
+  path: "/",
+  image: media.signingConsultation,
+});
 
 const services = [
   {
@@ -93,6 +106,30 @@ export default function Home() {
             </Button>
           </article>
         ))}
+      </section>
+
+      <section id="areas" className="area-block">
+        <header className="page-head">
+          <div>
+            <p className="kicker">Service areas</p>
+            <h2 className="headline">Where a notary can meet you</h2>
+          </div>
+          <Button intent="learn" href="/areas">
+            All communities
+          </Button>
+        </header>
+        <div className="card-grid">
+          {areaHubs.map((area) => (
+            <article key={area.slug} className="panel">
+              <p className="kicker">{area.county}</p>
+              <h3 className="title">{area.name}</h3>
+              <p className="reading">{area.demand}</p>
+              <Button intent="learn" href={areaPath(area)} size="sm">
+                {area.name} notary
+              </Button>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section id="about" className="panel panel--wide about">

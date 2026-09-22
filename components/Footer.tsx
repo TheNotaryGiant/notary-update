@@ -9,6 +9,9 @@ export function Footer() {
       </p>
       <p className="meta">{site.location} · {site.hours}</p>
       <p className="site-footer__links">
+        <Button intent="quiet" href="/areas" size="sm">
+          Service Areas
+        </Button>
         <Button intent="quiet" href="/privacy-policy" size="sm">
           Privacy Policy
         </Button>

@@ -1,11 +1,16 @@
 export const site = {
   name: "The Notary Giant®",
   legalName: "The Notary Giant Professional Service Corporation",
+  url: "https://www.thenotarygiant.com",
   phoneDisplay: "(646) 423-6350",
   phoneTel: "tel:+16464236350",
+  phoneSchema: "+1-646-423-6350",
   email: "ojbien-aime@thenotarygiant.com",
+  founder: "Oswald Joseph Bien-Aimé",
+  founderTitle: "Founder & CEO",
   location: "New York, New York, United States",
   hours: "Mon – Fri, 9am – 5pm",
+  contentUpdated: "2026-09-23",
 } as const;
 
 export const media = {
@@ -34,6 +39,7 @@ export const inquiryServices = [
 export const nav = [
   { label: "Overview", href: "/" },
   { label: "Services", href: "/#services" },
+  { label: "Areas", href: "/areas" },
   { label: "About", href: "/#about" },
   { label: "Reviews", href: "/#reviews" },
   { label: "FAQ", href: "/#faq" },

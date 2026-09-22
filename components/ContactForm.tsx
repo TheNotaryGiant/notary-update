@@ -1,10 +1,13 @@
 "use client";
 
 import { type FormEvent, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { inquiryServices, site } from "@/lib/site";
 
 export function ContactForm() {
   const [sent, setSent] = useState(false);
+  const params = useSearchParams();
+  const area = (params.get("area") ?? "").replace(/[\r\n<>]/g, "").trim().slice(0, 80);
 
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -18,7 +21,7 @@ export function ContactForm() {
       `Notary inquiry${service ? ` — ${service}` : ""}`,
     );
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\n\n${details}`,
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\nArea: ${area || "Not specified"}\n\n${details}`,
     );
     setSent(true);
     window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
@@ -26,6 +29,9 @@ export function ContactForm() {
 
   return (
     <form id="form" className="contact-form" onSubmit={onSubmit}>
+      {area ? (
+        <p className="reading">{`This request is for a visit in ${area}.`}</p>
+      ) : null}
       <label className="field">
         <span>Full name</span>
         <input name="name" type="text" autoComplete="name" required />

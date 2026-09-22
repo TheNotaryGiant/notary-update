@@ -1,4 +1,12 @@
 import { ServicePage } from "@/components/ServicePage";
+import { pageMeta } from "@/lib/page-meta";
+
+export const metadata = pageMeta({
+  title: "Notary Services in New York",
+  description:
+    "Acknowledgments, oaths, and execution of eligible documents by commissioned New York notaries. Mobile appointments across NYC and Nassau County.",
+  path: "/notary-services",
+});
 
 export default function Page() {
   return (

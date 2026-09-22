@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
 import { LegalDoc } from "@/components/LegalDoc";
+import { pageMeta } from "@/lib/page-meta";
 import { site } from "@/lib/site";
 
 const effectiveDate = "September 21, 2026";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Terms of Use",
   description: `Terms governing use of the ${site.name} website and engagement of New York notarial and related services.`,
-};
+  path: "/terms-of-use",
+});
 
 const toc = [
   { id: "agreement", label: "The agreement" },

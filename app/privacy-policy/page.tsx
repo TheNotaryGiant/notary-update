@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
 import { LegalDoc } from "@/components/LegalDoc";
+import { pageMeta } from "@/lib/page-meta";
 import { site } from "@/lib/site";
 
 const effectiveDate = "September 21, 2026";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Privacy Policy",
   description: `How ${site.name} collects, uses, shares, and protects personal information under New York law, including the SHIELD Act.`,
-};
+  path: "/privacy-policy",
+});
 
 const toc = [
   { id: "who", label: "Who we are" },

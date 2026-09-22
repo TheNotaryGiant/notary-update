@@ -1,4 +1,12 @@
 import { ServicePage } from "@/components/ServicePage";
+import { pageMeta } from "@/lib/page-meta";
+
+export const metadata = pageMeta({
+  title: "Signature Witnessing in New York",
+  description:
+    "Signature witnessing and loan-signing appointments for lenders, title companies, attorneys, and real estate professionals across NYC and Nassau County.",
+  path: "/signature-witnessing",
+});
 
 export default function Page() {
   return (

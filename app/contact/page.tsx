@@ -1,10 +1,16 @@
+import { Suspense } from "react";
 import { ContactForm } from "@/components/ContactForm";
 import { Button } from "@/components/ui/Button";
+import { pageMeta } from "@/lib/page-meta";
 import { media, site } from "@/lib/site";
 
-export const metadata = {
-  title: "Contact",
-};
+export const metadata = pageMeta({
+  title: "Contact a Mobile Notary",
+  description:
+    "Book a commissioned New York notary for NYC or Nassau County. Call (646) 423-6350 or send an appointment request.",
+  path: "/contact",
+  image: media.bookingPortrait,
+});
 
 export default function ContactPage() {
   return (
@@ -60,7 +66,9 @@ export default function ContactPage() {
             Tell us what you need. We will follow up to confirm timing and
             documents.
           </p>
-          <ContactForm />
+          <Suspense fallback={<p className="reading">Loading the request form.</p>}>
+            <ContactForm />
+          </Suspense>
         </div>
       </section>
     </div>
