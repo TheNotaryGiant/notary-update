@@ -15,6 +15,9 @@ export const media = {
   favicon: "/media/u-6oPFyWnEWRE5RkZ8PK1g_NotaryGiant_facicon_144.png",
   heroStamp:
     "/media/fru9WZwkv0-rYQkMRE5Cnw_Notary public at work signing documents.png",
+  officePortrait: "/media/oswald-at-the-office.jpg",
+  signingConsultation:
+    "/media/professional-notary-signing-consultation.jpg",
   bookingPortrait: "/media/b9_JN-jfsEWrr-QQKATX4A_1image.png",
   star: "/media/star.svg",
 } as const;

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { media, site } from "@/lib/site";
 
@@ -52,9 +53,12 @@ export default function Home() {
           </div>
         </div>
         <div className="saas-hero__media">
-          <img
-            src={media.heroStamp}
-            alt="Notary seal being applied to a document"
+          <Image
+            src={media.officePortrait}
+            alt="Oswald Joseph Bien-Aimé signing documents in his office"
+            fill
+            preload
+            sizes="(max-width: 719px) 100vw, 50vw"
           />
         </div>
       </section>
@@ -91,15 +95,25 @@ export default function Home() {
         ))}
       </section>
 
-      <section id="about" className="panel panel--wide">
-        <p className="kicker">About</p>
-        <h2 className="headline">Meet the Founder & CEO</h2>
-        <p className="reading">
-          Oswald Joseph Bien-Aimé is the Founder & CEO of {site.name}{" "}
-          Professional Service Corporation, established in 2019. His experience
-          in the notary field dates back to 2002, serving individuals,
-          businesses, and professionals throughout New York.
-        </p>
+      <section id="about" className="panel panel--wide about">
+        <div className="about__copy">
+          <p className="kicker">About</p>
+          <h2 className="headline">Meet the Founder & CEO</h2>
+          <p className="reading">
+            Oswald Joseph Bien-Aimé is the Founder & CEO of {site.name}{" "}
+            Professional Service Corporation, established in 2019. His experience
+            in the notary field dates back to 2002, serving individuals,
+            businesses, and professionals throughout New York.
+          </p>
+        </div>
+        <div className="about__media">
+          <Image
+            src={media.signingConsultation}
+            alt="Oswald Joseph Bien-Aimé guiding a client through a document signing"
+            fill
+            sizes="(max-width: 719px) 100vw, 36vw"
+          />
+        </div>
       </section>
 
       <section id="reviews" className="card-grid">
