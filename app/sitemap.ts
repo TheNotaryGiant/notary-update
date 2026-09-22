@@ -1,8 +1,6 @@
 import type { MetadataRoute } from "next";
 import { areaPath, areas } from "@/lib/areas";
-import { site } from "@/lib/site";
-
-const updated = new Date(site.contentUpdated);
+import { pageUrl, site } from "@/lib/site";
 
 const staticRoutes: Array<{
   path: string;
@@ -22,14 +20,14 @@ const staticRoutes: Array<{
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticRoutes.map((route) => ({
-      url: `${site.url}${route.path}`,
-      lastModified: updated,
+      url: pageUrl(route.path),
+      lastModified: site.contentUpdated,
       changeFrequency: route.changeFrequency,
       priority: route.priority,
     })),
     ...areas.map((area) => ({
-      url: `${site.url}${areaPath(area)}`,
-      lastModified: updated,
+      url: pageUrl(areaPath(area)),
+      lastModified: site.contentUpdated,
       changeFrequency: "monthly" as const,
       priority: area.hub === null ? 0.8 : 0.6,
     })),

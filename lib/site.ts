@@ -13,6 +13,12 @@ export const site = {
   contentUpdated: "2026-09-23",
 } as const;
 
+/** Canonical URL. The homepage has no trailing slash, matching the site canonical. */
+export function pageUrl(path: string) {
+  if (path === "/") return site.url;
+  return `${site.url}${path}`;
+}
+
 export const media = {
   logo: "/media/5sJ5dYOSMkad0ZPJSyuREA_The_Notary_Giant_BIMI.svg",
   lockup:

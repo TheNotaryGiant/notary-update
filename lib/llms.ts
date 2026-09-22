@@ -1,8 +1,8 @@
 import { areaPath, areas, areaHubs, childrenOf } from "@/lib/areas";
-import { site } from "@/lib/site";
+import { pageUrl, site } from "@/lib/site";
 
 function link(label: string, path: string, note: string) {
-  return `- [${label}](${site.url}${path}): ${note}`;
+  return `- [${label}](${pageUrl(path)}): ${note}`;
 }
 
 export function llmsTxt() {
