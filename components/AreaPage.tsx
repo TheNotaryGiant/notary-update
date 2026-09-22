@@ -26,8 +26,8 @@ export function AreaPage({ area }: { area: Area }) {
   const related = relatedAreas(area);
   const faqs = areaFaqs(area);
   const photo = areaPhoto(area);
-  const bookHref = `/contact?area=${encodeURIComponent(area.name)}#form`;
   const where = `${area.prep} ${area.name}`;
+  const bookHref = `/contact?area=${encodeURIComponent(where)}#form`;
 
   return (
     <div className="workspace-page">
@@ -60,13 +60,13 @@ export function AreaPage({ area }: { area: Area }) {
           <h2 className="display">{`A commissioned notary comes to you ${where}.`}</h2>
           <div className="area-copy">
             <p className="reading-lg">
-              {`${site.name} comes to you ${where} for acknowledgments, oaths, signature witnessing, loan-signing appointments, and preparation of documents that may later need an apostille. ${area.demand}`}
+              {`${site.name} handles acknowledgments, oaths, signature witnessing, loan signings, and preparation of documents that may later need an apostille. ${area.demand}`}
             </p>
             <p className="reading">{area.place}</p>
           </div>
           <div className="saas-hero__actions">
             <Button intent="book" href={bookHref} size="lg">
-              Book in {area.name}
+              Book a visit
             </Button>
             <Button intent="call" size="lg">
               Call {site.phoneDisplay}
@@ -94,16 +94,16 @@ export function AreaPage({ area }: { area: Area }) {
           <span className="meta">The notary comes to you</span>
         </div>
         <div>
-          <strong>{area.county === "Nassau County" ? "Advance" : "NYC"}</strong>
+          <strong>{area.county === "Nassau County" ? "Booked" : "Confirmed"}</strong>
           <span className="meta">
             {area.county === "Nassau County"
-              ? "Nassau visits are scheduled ahead"
-              : "Five boroughs, by appointment"}
+              ? "Nassau visits are booked in advance"
+              : "We confirm every appointment"}
           </span>
         </div>
         <div>
           <strong>2002</strong>
-          <span className="meta">{site.founder.split(" ")[0]} notarizing since</span>
+          <span className="meta">Notarizing since</span>
         </div>
       </section>
 
@@ -111,12 +111,13 @@ export function AreaPage({ area }: { area: Area }) {
         <p className="kicker">Meetings</p>
         <h2 className="headline">Where we meet {where}</h2>
         <p className="reading">
-          There is no separate {area.name} storefront. You choose a lawful
-          location, and the notary travels there.
+          {`You choose the location. The notary comes to a home, office, hospital, or closing table ${where}.`}
         </p>
         <ul className="meet-list reading">
           {area.meetings.map((meeting) => (
-            <li key={meeting}>{meeting}</li>
+            <li key={meeting}>
+              {meeting.charAt(0).toUpperCase() + meeting.slice(1)}
+            </li>
           ))}
         </ul>
         <p className="reading">
@@ -152,7 +153,7 @@ export function AreaPage({ area }: { area: Area }) {
         </article>
         <article className="panel">
           <p className="kicker">Related services</p>
-          <h2 className="title">Documents we see {where}</h2>
+          <h2 className="title">Services for this visit</h2>
           <ul className="area-links">
             <li>
               <Link href="/notary-services">Notary services</Link>
@@ -174,10 +175,13 @@ export function AreaPage({ area }: { area: Area }) {
       {children.length > 0 ? (
         <section className="panel panel--wide">
           <p className="kicker">Communities</p>
-          <h2 className="headline">Notary travel within {area.name}</h2>
+          <h2 className="headline">{`Where we travel ${where}`}</h2>
           <p className="reading">
-            Each community below has its own page because the meeting places
-            differ. All of them are travel appointments, not branch offices.
+            {area.kind === "county"
+              ? "Choose the city, village, or hamlet where the signer will be."
+              : "Choose the neighborhood where the signer will be."}{" "}
+            Every visit is a travel appointment. We do not keep a branch office
+            in each community.
           </p>
           <ul className="directory">
             {children.map((child) => (
@@ -191,7 +195,7 @@ export function AreaPage({ area }: { area: Area }) {
 
       <section className="panel panel--wide">
         <p className="kicker">Questions</p>
-        <h2 className="headline">Questions about notary service {where}</h2>
+        <h2 className="headline">{`Questions about notary appointments ${where}`}</h2>
         <div className="faq-list">
           {faqs.map((faq) => (
             <article key={faq.question}>

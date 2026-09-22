@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { areaHubs, areaPath } from "@/lib/areas";
 import { pageMeta } from "@/lib/page-meta";
@@ -7,10 +8,10 @@ import { media, site } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: {
-    absolute: "Mobile Notary in NYC and Nassau | The Notary Giant®",
+    absolute: "New York Notary Services | The Notary Giant®",
   },
   description:
-    "Commissioned New York notaries travel across NYC and Nassau County for acknowledgments, loan signings, and apostille document preparation.",
+    "Commissioned New York notaries come to homes, offices, hospitals, and closing tables across New York City and Nassau County.",
   path: "/",
   image: media.signingConsultation,
 });
@@ -18,9 +19,9 @@ export const metadata: Metadata = pageMeta({
 const services = [
   {
     kicker: "Mobile",
-    title: "Notary services",
+    title: "New York notary services",
     href: "/notary-services",
-    body: "Acknowledgments, oaths, and execution of eligible documents — on your schedule.",
+    body: "Acknowledgments, oaths, and other eligible notarial acts, performed at your location.",
   },
   {
     kicker: "International",
@@ -42,7 +43,7 @@ export default function Home() {
       <header className="page-head" id="overview">
         <div>
           <p className="kicker">Overview</p>
-          <h1 className="headline">Notary operations for New York</h1>
+          <h1 className="headline">New York notary services</h1>
         </div>
       </header>
 
@@ -53,8 +54,9 @@ export default function Home() {
             Precision, speed, and care — wherever the documents are.
           </h2>
           <p className="reading-lg">
-            Same-day appointments, commissioned New York notaries, and
-            apostille assistance across NYC and surrounding areas.
+            Commissioned New York notaries come to you across the five
+            boroughs and Nassau County. Same-day appointments are often
+            available, and every visit is confirmed before we travel.
           </p>
           <div className="saas-hero__actions">
             <Button intent="book" size="lg">
@@ -91,7 +93,7 @@ export default function Home() {
         </div>
         <div>
           <strong>Same day</strong>
-          <span className="meta">Appointments available</span>
+          <span className="meta">Often available</span>
         </div>
       </section>
 
@@ -125,7 +127,7 @@ export default function Home() {
               <h3 className="title">{area.name}</h3>
               <p className="reading">{area.demand}</p>
               <Button intent="learn" href={areaPath(area)} size="sm">
-                {area.name} notary
+              {area.prep === "on" ? `Notary on ${area.name}` : `Notary in ${area.name}`}
               </Button>
             </article>
           ))}
@@ -175,24 +177,51 @@ export default function Home() {
             “I needed a last-minute mobile notary appointment, and The Notary
             Giant delivered.”
           </blockquote>
-          <p className="meta">Jean-Francois K</p>
+          <p className="meta">Jean-Francois K.</p>
         </article>
       </section>
 
       <section id="faq" className="panel panel--wide">
         <p className="kicker">FAQ</p>
-        <h2 className="headline">Frequently asked</h2>
-        <p className="reading">
-          Payments: Zelle, major cards, and cash. Bring your complete document
-          and acceptable ID. Do not sign in advance if the act requires signing
-          in the notary’s presence.
-        </p>
+        <h2 className="headline">Frequently asked questions</h2>
+        <div className="faq-list">
+          <article>
+            <h3 className="title">What New York notary services do you provide?</h3>
+            <p className="reading">
+              Acknowledgments, oaths, signature witnessing, and loan signings
+              by a commissioned New York notary. We also help prepare documents
+              for apostille. We do not give legal advice, and we do not issue
+              apostilles.
+            </p>
+          </article>
+          <article>
+            <h3 className="title">Where do you meet clients?</h3>
+            <p className="reading">
+              At a home, office, hospital, or closing table in New York City
+              and Nassau County. Nassau County visits are scheduled in advance.
+              The{" "}
+              <Link href="/areas">service-area list</Link> names the
+              communities where a notary can meet you.
+            </p>
+          </article>
+          <article>
+            <h3 className="title">What should I bring?</h3>
+            <p className="reading">
+              Bring the complete document and a current government-issued photo
+              ID. Do not sign beforehand if the act requires you to sign in the
+              notary’s presence. Payment is by Zelle, major cards, or cash.
+            </p>
+          </article>
+        </div>
       </section>
 
       <section id="book" className="panel panel--wide panel--book">
         <p className="kicker">Appointments</p>
         <h2 className="headline">Book now</h2>
-        <p className="reading">We are ready to help you with your needs.</p>
+        <p className="reading">
+          Call or send a request. We confirm the time, the place, and the
+          documents before we travel.
+        </p>
         <Button intent="call">Or call {site.phoneDisplay}</Button>
       </section>
     </div>

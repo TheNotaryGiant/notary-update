@@ -21,38 +21,50 @@ export function areaHeading(area: Area) {
   return `Mobile Notary ${area.prep} ${area.name}`;
 }
 
+function schedulingLine(area: Area) {
+  if (area.county === "Nassau County") {
+    return area.kind === "county"
+      ? "Nassau County appointments are scheduled in advance."
+      : `Visits to ${area.name} are scheduled in advance.`;
+  }
+
+  return "We confirm the appointment when you book. Same-day visits are often available, and they are not guaranteed.";
+}
+
+function meetingList(meetings: readonly string[]) {
+  const items = meetings.map((meeting) => meeting.charAt(0).toLowerCase() + meeting.slice(1));
+  if (items.length < 2) return items[0] ?? "";
+  return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+}
+
 export function areaDescription(area: Area) {
   const scheduling =
     area.county === "Nassau County"
-      ? "Nassau visits are scheduled in advance."
-      : "Appointments are confirmed when you book.";
+      ? "Nassau County visits are scheduled in advance."
+      : "The appointment is confirmed when you book.";
 
-  return `Commissioned New York notaries come to you ${area.prep} ${area.name} for acknowledgments, oaths, and loan signings. ${scheduling}`;
+  return `A commissioned New York notary comes to you ${area.prep} ${area.name} for acknowledgments, oaths, and loan signings. ${scheduling}`;
 }
 
 export function areaFaqs(area: Area): AreaFaq[] {
   const where = `${area.prep} ${area.name}`;
-  const scheduling =
-    area.county === "Nassau County"
-      ? `Nassau County appointments, including ${area.name}, are scheduled in advance.`
-      : `Visits ${where} are confirmed when you book. Same-day service is often available and is never guaranteed.`;
 
   return [
     {
-      question: `Do you travel ${where} for notary appointments?`,
-      answer: `Yes. A commissioned New York notary from ${site.name} travels ${where}. ${scheduling} ${area.demand}`,
+      question: `Do you come to clients ${where}?`,
+      answer: `Yes. A commissioned New York notary from ${site.name} comes to you ${where}. ${schedulingLine(area)} ${area.demand}`,
     },
     {
-      question: `Where can we meet ${where}?`,
-      answer: `There is no branch office ${where}. The notary meets you at a lawful location you choose. Typical meetings include ${area.meetings.join("; ")}. Hospitals and secured buildings control visitor access, so entry is not guaranteed.`,
+      question: `Where can the notary meet me ${where}?`,
+      answer: `You choose a lawful location ${where}. Common meeting places include ${meetingList(area.meetings)}. Hospitals, nursing homes, and secured buildings control visitor access, so entry is not guaranteed.`,
     },
     {
       question: `What should I bring to a notary appointment ${where}?`,
-      answer: `Bring the complete document and a current government-issued photo ID. Do not sign beforehand if the act requires you to sign in the notary’s presence. ${area.place}`,
+      answer: `Bring the complete document and a current government-issued photo ID. Do not sign beforehand if the act requires you to sign in the notary’s presence. Every person who must sign or take an oath has to appear. ${area.place}`,
     },
     {
-      question: `How much does a mobile notary visit ${where} cost?`,
-      answer: `For a visit ${where}, New York caps a paper notarial act at $2 per act, per person, under Executive Law § 136. An electronic notarial act may be charged up to $25 when a registered electronic notary performs it. Travel and other convenience charges are quoted separately before you book.`,
+      question: `What does a notary visit ${where} cost?`,
+      answer: `For an appointment ${where}, New York caps a paper notarial act at $2 per act, per person, under Executive Law § 136. An electronic notarial act may cost up to $25 when a registered New York electronic notary performs it. Travel, tolls, waiting, and rush scheduling are quoted separately before you book.`,
     },
   ];
 }

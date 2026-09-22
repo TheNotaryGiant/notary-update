@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 export const metadata: Metadata = pageMeta({
   title: "Notary Service Areas in NYC and Nassau",
   description:
-    "Mobile notary travel across Manhattan, Brooklyn, Queens, the Bronx, Staten Island, and Nassau County. Find the community where a notary can meet you.",
+    "Mobile notaries travel across Manhattan, Brooklyn, Queens, the Bronx, Staten Island, and Nassau County. Choose the community where the signer will be.",
   path: "/areas",
 });
 

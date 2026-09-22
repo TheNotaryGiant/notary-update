@@ -22,14 +22,14 @@ ${site.name} is not a law firm and does not give legal advice. Notaries travel t
 
 ## Services
 
-${link("Notary services", "/notary-services", "Acknowledgments, oaths, and execution of eligible documents.")}
+${link("Notary services", "/notary-services", "New York notary services: acknowledgments, oaths, and other eligible notarial acts.")}
 ${link("Apostille assistance", "/apostille-authentication", "Preparation and coordination for documents intended for use outside the United States.")}
 ${link("Signature witnessing", "/signature-witnessing", "Witnessing and loan-signing appointments for eligible documents.")}
 
 ## Company
 
-${link("Overview", "/", "Mobile notary practice serving New York City and Nassau County.")}
-${link("Service areas", "/areas", `Directory of ${areas.length} New York City and Nassau communities where a notary can travel.`)}
+${link("Overview", "/", "New York notary services for New York City and Nassau County.")}
+${link("Service areas", "/areas", `Directory of ${areas.length} New York City and Nassau communities where a notary can meet you.`)}
 ${link("Contact", "/contact", `Book by form, or call ${site.phoneDisplay}.`)}
 ${link("Privacy Policy", "/privacy-policy", "How personal information is collected and protected.")}
 ${link("Terms of Use", "/terms-of-use", "Terms for the website and for notarial engagements, including fees.")}

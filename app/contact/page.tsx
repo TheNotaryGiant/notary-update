@@ -25,10 +25,11 @@ export default function ContactPage() {
       <section className="contact-grid">
         <div className="panel panel--wide">
           <p className="kicker">We’re here to assist</p>
-          <h2 className="title">All your notary needs</h2>
+          <h2 className="title">Book a New York notary</h2>
           <p className="reading">
-            Reach out through the form, or call now. Same-day appointments are
-            available across NYC and surrounding areas.
+            Call or use the form. We confirm the time, the place, and the
+            documents before a notary travels anywhere in New York City or
+            Nassau County.
           </p>
           <ul className="contact-details">
             <li>

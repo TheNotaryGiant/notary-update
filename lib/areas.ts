@@ -128,7 +128,7 @@ export const areas: Area[] = [
         meetings: [
           "showrooms and brand offices",
           "loft apartments above Broadway and West Broadway",
-          "pop-up retail spaces that need a signer on site",
+          "pop-up retail spaces that need a signer on-site",
         ],
       },
       {
@@ -250,7 +250,7 @@ export const areas: Area[] = [
         place:
           "The Upper East Side runs from 59th Street to 96th Street east of Central Park, including the hospital corridor along York Avenue.",
         demand:
-          "Co-op purchases and bedside documents at Lenox Hill and the York Avenue hospitals are the appointments we see most often.",
+          "Co-op purchases and bedside documents at Lenox Hill Hospital and the York Avenue hospitals are the appointments clients request most often.",
         meetings: [
           "co-op apartments off Park and Lexington",
           "hospital rooms along York Avenue, when visitors are allowed",
@@ -325,7 +325,7 @@ export const areas: Area[] = [
       place:
         "Brooklyn is Kings County. The county courts sit in Downtown Brooklyn, and the borough runs from the Heights and Williamsburg south to Coney Island.",
       demand:
-        "Brownstone closings, family affidavits, and court-related paperwork are the appointments that come up most across the borough.",
+        "Brownstone closings, family affidavits, and court papers are the requests we handle most often across the borough.",
       meetings: [
         "brownstones and walk-up apartments",
         "offices near the Kings County courts",
@@ -386,7 +386,7 @@ export const areas: Area[] = [
         meetings: [
           "brownstones around the park",
           "apartment buildings toward the Navy Yard",
-          "professional offices near Dekalb Avenue",
+          "professional offices near DeKalb Avenue",
         ],
       },
       {
@@ -396,11 +396,11 @@ export const areas: Area[] = [
         place:
           "Williamsburg occupies the East River waterfront north of the Williamsburg Bridge, with lofts, new rentals, and long-standing residential blocks.",
         demand:
-          "Loft purchases, startup authorizations, and residential affidavits make up most of the appointments.",
+          "Loft purchases, startup authorizations, and residential affidavits are the appointments we handle most often.",
         meetings: [
           "loft and rental apartments",
           "startup and studio offices",
-          "family homes in the southside blocks",
+          "family homes on the south side",
         ],
       },
       {
@@ -498,7 +498,7 @@ export const areas: Area[] = [
         meetings: [
           "private houses",
           "apartment buildings off 86th Street",
-          "family kitchens where the signer is most comfortable",
+          "homes where the signer prefers to meet",
         ],
       },
       {
@@ -794,7 +794,7 @@ export const areas: Area[] = [
         place:
           "Far Rockaway is the eastern end of the Rockaway peninsula in Queens, a residential community around the A train and St. John’s Episcopal Hospital.",
         demand:
-          "Homebound signers and hospital families are the people who most often need a notary to come to the peninsula.",
+          "Homebound signers and hospital families are the clients who most often need a notary to come to the peninsula.",
         meetings: [
           "houses and apartment buildings",
           "St. John’s Episcopal Hospital when the facility allows entry",
@@ -813,7 +813,7 @@ export const areas: Area[] = [
       place:
         "The Bronx is Bronx County, from Mott Haven at the Harlem River north to Riverdale and east to City Island. The county court stands on the Grand Concourse.",
       demand:
-        "Residential affidavits, hospital signings, and documents related to the Grand Concourse courts are the requests we see most.",
+        "Residential affidavits, hospital signings, and papers for the Grand Concourse courts are the requests clients make most often.",
       meetings: [
         "private houses and apartment buildings",
         "hospital campuses when visitor access is approved",
@@ -1192,7 +1192,7 @@ export const areas: Area[] = [
         place:
           "Long Beach is an independent city on a barrier island in Nassau, with a boardwalk, apartment houses, and residential streets.",
         demand:
-          "Condo and co-op documents, plus homebound signings, are the usual reason to book a trip onto the island.",
+          "Condo and co-op documents, and signings for people who cannot travel, are the usual reason to book a visit to the island.",
         meetings: [
           "boardwalk-area apartments",
           "houses on the residential streets",

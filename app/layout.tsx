@@ -10,11 +10,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Mobile Notary in NYC and Nassau | The Notary Giant®",
+    default: "New York Notary Services | The Notary Giant®",
     template: "%s | The Notary Giant®",
   },
   description:
-    "The Notary Giant® provides professional mobile notary, electronic notarization, loan signing and apostille assistance throughout NYC and Nassau County.",
+    "The Notary Giant® provides commissioned New York notary services, including mobile notarization, loan signings, and apostille assistance, throughout New York City and Nassau County.",
   applicationName: site.name,
   icons: {
     icon: media.favicon,

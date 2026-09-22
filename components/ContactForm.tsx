@@ -4,6 +4,16 @@ import { type FormEvent, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { inquiryServices, site } from "@/lib/site";
 
+function appointmentLine(area: string) {
+  if (/^(in|on)\s/i.test(area)) {
+    return `This request is for an appointment ${area}.`;
+  }
+  if (area === "Staten Island" || area === "City Island") {
+    return `This request is for an appointment on ${area}.`;
+  }
+  return `This request is for an appointment in ${area}.`;
+}
+
 export function ContactForm() {
   const [sent, setSent] = useState(false);
   const params = useSearchParams();
@@ -30,7 +40,7 @@ export function ContactForm() {
   return (
     <form id="form" className="contact-form" onSubmit={onSubmit}>
       {area ? (
-        <p className="reading">{`This request is for a visit in ${area}.`}</p>
+        <p className="reading">{appointmentLine(area)}</p>
       ) : null}
       <label className="field">
         <span>Full name</span>
@@ -58,7 +68,7 @@ export function ContactForm() {
         </select>
       </label>
       <label className="field field--wide">
-        <span>Job details</span>
+        <span>Appointment details</span>
         <textarea name="details" rows={5} required />
       </label>
       <button className="btn btn-book btn-md" type="submit">
