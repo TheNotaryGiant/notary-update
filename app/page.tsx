@@ -54,8 +54,8 @@ export default function Home() {
         </div>
         <div className="saas-hero__media">
           <Image
-            src={media.officePortrait}
-            alt="Oswald Joseph Bien-Aimé signing documents in his office"
+            src={media.signingConsultation}
+            alt="Oswald Joseph Bien-Aimé guiding a client through a document signing"
             fill
             preload
             sizes="(max-width: 719px) 100vw, 50vw"
@@ -108,8 +108,8 @@ export default function Home() {
         </div>
         <div className="about__media">
           <Image
-            src={media.signingConsultation}
-            alt="Oswald Joseph Bien-Aimé guiding a client through a document signing"
+            src={media.officePortrait}
+            alt="Oswald Joseph Bien-Aimé signing documents in his office"
             fill
             sizes="(max-width: 719px) 100vw, 36vw"
           />

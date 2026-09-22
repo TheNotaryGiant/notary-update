@@ -472,7 +472,7 @@ img {
   position: relative;
   border-radius: 0.85rem;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 5 / 4;
 }
 
 .saas-hero__media img {
@@ -495,7 +495,7 @@ img {
   position: relative;
   overflow: hidden;
   border-radius: 0.85rem;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 16 / 9;
 }
 
 .about__media img {
