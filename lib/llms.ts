@@ -31,6 +31,7 @@ ${link("Signature witnessing", "/signature-witnessing", "Witnessing and loan-sig
 ${link("Overview", "/", "New York notary services for New York City and Nassau County.")}
 ${link("Service areas", "/areas", `Directory of ${areas.length} New York City and Nassau communities where a notary can meet you.`)}
 ${link("Contact", "/contact", `Book by form, or call ${site.phoneDisplay}.`)}
+${link("Newsroom", "/newsroom", "Company announcements and press release publications.")}
 ${link("Privacy Policy", "/privacy-policy", "How personal information is collected and protected.")}
 ${link("Terms of Use", "/terms-of-use", "Terms for the website and for notarial engagements, including fees.")}
 

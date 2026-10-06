@@ -13,6 +13,7 @@ const staticRoutes: Array<{
   { path: "/apostille-authentication", changeFrequency: "monthly", priority: 0.8 },
   { path: "/signature-witnessing", changeFrequency: "monthly", priority: 0.8 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/newsroom", changeFrequency: "monthly", priority: 0.6 },
   { path: "/privacy-policy", changeFrequency: "yearly", priority: 0.3 },
   { path: "/terms-of-use", changeFrequency: "yearly", priority: 0.3 },
 ];

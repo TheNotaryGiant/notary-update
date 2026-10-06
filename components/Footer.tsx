@@ -12,6 +12,9 @@ export function Footer() {
         <Button intent="quiet" href="/areas" size="sm">
           Service Areas
         </Button>
+        <Button intent="quiet" href="/newsroom" size="sm">
+          Newsroom
+        </Button>
         <Button intent="quiet" href="/privacy-policy" size="sm">
           Privacy Policy
         </Button>

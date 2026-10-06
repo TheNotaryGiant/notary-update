@@ -6,6 +6,7 @@ export const site = {
   phoneTel: "tel:+16464236350",
   phoneSchema: "+1-646-423-6350",
   email: "ojbien-aime@thenotarygiant.com",
+  pressEmail: "ceo@thenotarygiant.com",
   founder: "Oswald Joseph Bien-Aimé",
   founderTitle: "Founder & CEO",
   location: "New York, New York, United States",
