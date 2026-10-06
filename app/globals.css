@@ -657,6 +657,99 @@ img {
   text-underline-offset: 0.18em;
 }
 
+.news-hero,
+.news-frame {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--navy);
+}
+
+.news-hero {
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+  margin: 0 auto;
+  max-width: 58rem;
+  width: 100%;
+}
+
+.news-feature {
+  max-width: 58rem;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.news-hero img,
+.news-frame img {
+  object-fit: cover;
+}
+
+.news-feature,
+.news-tile,
+.news-inquiries {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.news-feature,
+.news-tile {
+  display: grid;
+  align-content: start;
+}
+
+.news-feature__body,
+.news-tile__body,
+.news-inquiries__copy {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1.15rem 1.2rem 1.3rem;
+}
+
+.news-feature__body {
+  gap: 0.7rem;
+}
+
+.news-tile {
+  color: inherit;
+  text-decoration: none;
+}
+
+.news-tile .title,
+.news-tile .reading,
+.news-feature .reading,
+.news-feature .reading-lg {
+  margin: 0;
+}
+
+.news-tile:hover {
+  border-color: color-mix(in srgb, var(--gold) 42%, var(--line));
+}
+
+.news-tile:hover .title {
+  color: var(--gold);
+}
+
+.news-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.news-block {
+  display: grid;
+  gap: 1rem;
+}
+
+.news-inquiries {
+  display: grid;
+}
+
+.news-inquiries .news-frame {
+  border-radius: 0;
+}
+
 .site-footer__disclaimer {
   max-width: 46rem;
 }
@@ -702,6 +795,16 @@ img {
 
   .contact-grid {
     grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+  }
+
+  .news-grid--2,
+  .news-grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .news-inquiries {
+    grid-template-columns: 1.05fr 0.95fr;
     align-items: start;
   }
 
@@ -875,7 +978,12 @@ img {
 
 .faq-list {
   display: grid;
-  gap: 1.15rem;
+  gap: 2rem;
+}
+
+.faq-list article {
+  display: grid;
+  gap: 0.9rem;
 }
 
 .faq-list .title,
@@ -923,6 +1031,10 @@ img {
 
 @media (min-width: 1200px) {
   .directory {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .news-grid--3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

@@ -21,6 +21,10 @@ function activeHrefFromLocation(pathname: string, hash: string) {
     return "/areas";
   }
 
+  if (pathname === "/newsroom" || pathname.startsWith("/newsroom/")) {
+    return "/newsroom";
+  }
+
   if (pathname !== "/") {
     return null;
   }
@@ -51,13 +55,7 @@ export function Sidebar() {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [activeHref, setActiveHref] = useState<string | null>(() =>
-    pathname === "/contact"
-      ? "/contact"
-      : pathname === "/areas" || pathname.startsWith("/areas/")
-        ? "/areas"
-        : pathname === "/"
-          ? "/"
-          : null,
+    activeHrefFromLocation(pathname, ""),
   );
   const navRef = useRef<HTMLElement>(null);
   const itemRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
