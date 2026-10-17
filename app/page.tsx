@@ -8,7 +8,7 @@ import { media, site } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: {
-    absolute: "New York Notary Services | The Notary Giant®",
+    absolute: "New York Notary Services | The Notary Giant™",
   },
   description:
     "Commissioned New York notaries come to homes, offices, hospitals, and closing tables across New York City and Nassau County.",
@@ -49,7 +49,7 @@ export default function Home() {
 
       <section className="saas-hero">
         <div className="saas-hero__copy">
-          <p className="kicker">The Notary Giant®</p>
+          <p className="kicker">The Notary Giant™</p>
           <h2 className="display">
             Precision, speed, and care — wherever the documents are.
           </h2>

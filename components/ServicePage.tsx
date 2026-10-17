@@ -41,7 +41,7 @@ export function ServicePage({ kicker, title, lede, sections }: ServicePageProps)
       ))}
 
       <p className="meta">
-        The Notary Giant® is not a law firm. See the{" "}
+        The Notary Giant™ is not a law firm. See the{" "}
         <Link href="/areas">service areas</Link> and the{" "}
         <Link href="/terms-of-use">terms of use</Link> before you book.
       </p>

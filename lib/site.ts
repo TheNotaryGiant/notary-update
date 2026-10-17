@@ -1,5 +1,5 @@
 export const site = {
-  name: "The Notary Giant®",
+  name: "The Notary Giant™",
   legalName: "The Notary Giant Professional Service Corporation",
   url: "https://www.thenotarygiant.com",
   phoneDisplay: "(646) 423-6350",

@@ -420,7 +420,7 @@ export default function TermsPage() {
       <h2 id="ip">14. Intellectual property</h2>
       <p>
         {site.name} and the associated logo and website content are owned by us
-        or our licensors. The Notary Giant® is a registered trademark. You may
+        or our licensors. The Notary Giant™ is a registered trademark. You may
         not copy or use our branding except as needed to identify a legitimate
         appointment with us. You retain ownership of documents you provide. We
         do not claim copyright in your legal papers.

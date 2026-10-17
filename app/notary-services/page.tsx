@@ -13,7 +13,7 @@ export default function Page() {
     <ServicePage
       kicker="Services"
       title="New York notary services"
-      lede="A commissioned New York notary comes to the signer. The Notary Giant® provides acknowledgments, oaths, signature witnessing, and loan signings at homes, offices, hospitals, and closing tables in New York City and Nassau County."
+      lede="A commissioned New York notary comes to the signer. The Notary Giant™ provides acknowledgments, oaths, signature witnessing, and loan signings at homes, offices, hospitals, and closing tables in New York City and Nassau County."
       sections={[
         {
           heading: "What a New York notary can do",
