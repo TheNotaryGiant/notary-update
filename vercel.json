@@ -8,11 +8,8 @@
       ]
     }
   ],
-  "rewrites": [
-    { "source": "/feed.xml", "destination": "/api/feed.xml" },
-    { "source": "/rss", "destination": "/api/feed.xml" }
-  ],
   "redirects": [
+    { "source": "/rss", "destination": "/feed.xml", "permanent": true },
     { "source": "/rss.xml", "destination": "/feed.xml", "permanent": true }
   ]
 }
