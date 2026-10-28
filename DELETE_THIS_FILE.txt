@@ -1,9 +1,0 @@
-DELETE src/app/layout.tsx from GitHub if you have it
-
-Having BOTH app/layout.tsx and src/app/layout.tsx causes Error.
-Keep ONLY app/layout.tsx
-
-Steps:
-1. Go to github.com/TheNotaryGiant/notary-update
-2. If you see folder src/app/layout.tsx -> click it -> trash -> Commit
-3. Keep app/layout.tsx (the one in this zip)
