@@ -1,9 +1,10 @@
+
 export default function Page() {
   return (
-    <main className="mx-auto max-w-3xl p-8">
-      <a href="/blog" className="text-blue-700">← Back to Blog</a>
-      <h1 className="text-3xl font-bold mt-6">What to Bring</h1>
-      <p className="text-gray-600 mt-4">Full article content for What to Bring. This is a placeholder - replace with your detailed guide.</p>
+    <main style={maxWidth: '800px', margin: '0 auto', padding: '40px 20px'}>
+      <a href="/blog">← Blog</a>
+      <h1 style={fontSize: '28px', fontWeight: 'bold', marginTop: '16px'}>What To Bring</h1>
+      <p style={marginTop: '16px'}>Content for what-to-bring - coming soon.</p>
     </main>
   );
 }
