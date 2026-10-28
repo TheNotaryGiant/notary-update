@@ -40,15 +40,6 @@ const services = [
 export default function Home() {
   return (
     <div className="workspace-page">
-      <nav style={{display: 'flex', gap: '24px', justifyContent: 'flex-end', padding: '12px 0', fontSize: '14px', fontWeight: 600, borderBottom: '1px solid #eee', marginBottom: '24px'}}>
-        <Link href="/">Home</Link>
-        <Link href="/#services">Services</Link>
-        <Link href="/areas">Areas</Link>
-        <Link href="/blog" style={{fontWeight: 800, textDecoration: 'underline', color: '#0a1931'}}>Blog</Link>
-        <Link href="/#contact">Book</Link>
-        <Link href="/feed.xml" style={{color: '#ea580c'}}>RSS</Link>
-      </nav>
-
       <header className="page-head" id="overview">
         <div>
           <p className="kicker">Overview</p>
@@ -74,6 +65,11 @@ export default function Home() {
             <Button intent="call" size="lg">
               Call {site.phoneDisplay}
             </Button>
+            <Link href="/blog" style={{marginLeft: '8px'}}>
+              <Button intent="learn" size="lg">
+                Blog
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="saas-hero__media">
@@ -117,20 +113,6 @@ export default function Home() {
             </Button>
           </article>
         ))}
-      </section>
-
-      <section id="blog-preview" className="panel panel--wide" style={{background: '#f8fafc', border: '2px solid #0a1931'}}>
-        <p className="kicker">Blog</p>
-        <h2 className="headline">Helpful guides</h2>
-        <div style={{display: 'grid', gap: '16px', marginTop: '16px'}}>
-          <div><Link href="/blog/what-to-bring" style={{fontWeight: 600, textDecoration: 'underline'}}>→ What to Bring to a Mobile Notary Appointment in NYC</Link><p className="meta">Checklist for NYC mobile notary</p></div>
-          <div><Link href="/blog/apostille-checklist" style={{fontWeight: 600, textDecoration: 'underline'}}>→ Apostille Checklist: Documents Going Outside the U.S.</Link><p className="meta">How to prepare for apostille</p></div>
-          <div><Link href="/blog/loan-signing-tips" style={{fontWeight: 600, textDecoration: 'underline'}}>→ Loan Signing Tips for NYC Real Estate Closings</Link><p className="meta">Tips for co-op and condo closings</p></div>
-        </div>
-        <div style={{marginTop: '20px'}}>
-          <Button intent="learn" href="/blog">View All Blog Posts</Button>
-          <span style={{marginLeft: '12px'}}><Button intent="learn" href="/feed.xml">RSS Feed</Button></span>
-        </div>
       </section>
 
       <section id="areas" className="area-block">
@@ -232,7 +214,7 @@ export default function Home() {
             <p className="reading">
               Bring the complete document and a current government-issued photo
               ID. Do not sign beforehand if the act requires you to sign in the
-              notary&apos;s presence. Payment is by Zelle, major cards, or cash.
+              notary’s presence. Payment is by Zelle, major cards, or cash.
             </p>
           </article>
         </div>
