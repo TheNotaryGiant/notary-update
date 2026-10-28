@@ -1,22 +1,11 @@
 
-import Link from "next/link";
-import { Button } from "@/components/ui/Button";
 export default function Post() {
   return (
-    <div className="workspace-page">
-      <header className="page-head">
-        <div>
-          <p className="kicker">Blog</p>
-          <h1 className="headline">Apostille Checklist: Documents Going Outside the U.S.</h1>
-        </div>
-        <Button intent="learn" href="/blog">← Back to Blog</Button>
-      </header>
-      <section className="panel panel--wide">
-        <div className="reading">
-          <p>After notarization, documents for use outside the U.S. often need county clerk certification and state apostille. The Notary Giant prepares and coordinates the steps so your documents are ready for the Department of State.</p>
-          <p style={marginTop: '24px'}><Link href="/blog" style={textDecoration: 'underline'}>← All posts</Link> | <Link href="/feed.xml" style={textDecoration: 'underline', color: '#ea580c'}> RSS</Link></p>
-        </div>
-      </section>
+    <div style={maxWidth: '800px', margin: '0 auto', padding: '40px 20px', fontFamily: 'system-ui'}>
+      <a href="/blog" style={color: '#2563eb', textDecoration: 'underline'}>← Back to Blog</a>
+      <h1 style={fontSize: '30px', fontWeight: '800', marginTop: '16px'}>Apostille Checklist: Documents Going Outside the U.S.</h1>
+      <p style={marginTop: '16px', lineHeight: '1.6', color: '#333'}>After notarization, documents for use outside the U.S. often need county clerk certification and state apostille. The Notary Giant prepares and coordinates the steps.</p>
+      <p style={marginTop: '24px'}><a href="/blog" style={textDecoration: 'underline'}>← All posts</a> | <a href="/feed.xml" style={color: '#ea580c', textDecoration: 'underline'}> RSS</a></p>
     </div>
   );
 }
