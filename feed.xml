@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Notary Giant™ - New York Notary Services</title>
+    <link>https://www.thenotarygiant.com/</link>
+    <description>Precision, speed, and care — wherever the documents are. Commissioned New York mobile notary services across NYC and Nassau County.</description>
+    <language>en-us</language>
+    <copyright>Copyright © 2026 The Notary Giant™ Professional Service Corporation. All rights reserved.</copyright>
+    <managingEditor>info@thenotarygiant.com (Oswald Joseph Bien-Aimé)</managingEditor>
+    <webMaster>info@thenotarygiant.com (The Notary Giant)</webMaster>
+    <lastBuildDate>Wed, 28 Oct 2026 03:05:51 +0000</lastBuildDate>
+    <pubDate>Wed, 28 Oct 2026 03:05:51 +0000</pubDate>
+    <generator>The Notary Giant™ RSS for thenotarygiant/notary-update</generator>
+    <atom:link href="https://thenotarygiant.github.io/notary-update/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://www.thenotarygiant.com/assets/logo.png</url>
+      <title>The Notary Giant™</title>
+      <link>https://www.thenotarygiant.com/</link>
+    </image>
+
+    <item>
+      <title>New York Mobile Notary Services</title>
+      <link>https://www.thenotarygiant.com/</link>
+      <guid isPermaLink="true">https://www.thenotarygiant.com/</guid>
+      <description>Mobile notary - acknowledgments, oaths, and eligible notarial acts performed at your location in Manhattan, Brooklyn, Queens, Bronx, Staten Island &amp; Nassau County.</description>
+      <pubDate>Wed, 28 Oct 2026 03:05:51 +0000</pubDate>
+      <category>Notary Services</category>
+    </item>
+
+    <item>
+      <title>Apostille Assistance</title>
+      <link>https://www.thenotarygiant.com/</link>
+      <guid isPermaLink="false">https://www.thenotarygiant.com/#apostille</guid>
+      <description>Preparation and coordination for documents intended for use outside the United States.</description>
+      <pubDate>Wed, 28 Oct 2026 03:05:51 +0000</pubDate>
+      <category>International</category>
+    </item>
+
+    <item>
+      <title>Loan Signings</title>
+      <link>https://www.thenotarygiant.com/</link>
+      <guid isPermaLink="false">https://www.thenotarygiant.com/#loan-signings</guid>
+      <description>Available for lenders, title companies, attorneys, and real estate professionals across New York.</description>
+      <pubDate>Wed, 28 Oct 2026 03:05:51 +0000</pubDate>
+      <category>Closings</category>
+    </item>
+
+  </channel>
+</rss>

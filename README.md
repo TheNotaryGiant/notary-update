@@ -1,23 +1,42 @@
-# The Notary Giant®
+# thenotarygiant/notary-update - Full Site with RSS
 
-Owned Next.js site for The Notary Giant Professional Service Corporation. This is the rebuild off Voolt so the business controls the code, media, and hosting.
+Built: Wed, 28 Oct 2026 03:08:45 +0000
+Repo: github.com/thenotarygiant/notary-update
 
-## Local
+## What's already done for you (RSS baked in)
+- index.html - FULL premium site, RSS link in <head> already added:
+  <link rel="alternate" type="application/rss+xml" href="https://thenotarygiant.github.io/notary-update/feed.xml" />
+  And footer RSS button already added (navy/gold/black)
 
-```bash
-npm install
-npm run dev
-```
+- styles.css - External CSS, brand colors
+- feed.xml - RSS 2.0 feed - atom:self = https://thenotarygiant.github.io/notary-update/feed.xml
+- .nojekyll - Ensures GitHub Pages serves files correctly
 
-Open [http://localhost:3000](http://localhost:3000).
+## RSS Links
+https://thenotarygiant.github.io/notary-update/feed.xml
+https://www.thenotarygiant.com/feed.xml (if CNAME connected)
 
-```bash
-npm run build
-npm start
-```
+## Push to github.com/thenotarygiant/notary-update
 
-## Notes
+EASIEST - GitHub website:
+1. Go to github.com/thenotarygiant/notary-update
+2. Click Add file > Upload files
+3. Drag ALL files from this zip (index.html, styles.css, feed.xml, .nojekyll) - overwrite existing
+4. Commit directly to main
 
-- Brand media lives in `public/media/`
-- Original Voolt page dumps are in `content/voolt/`
-- Booking and call actions are wired as intents in `components/ui/Button.tsx`
+Pages will auto-deploy in ~1 minute.
+
+GIT CLI:
+git clone https://github.com/thenotarygiant/notary-update.git
+cd notary-update
+# copy files from this zip over existing files
+git add .
+git commit -m "Add RSS feed + footer - Wed, 28 Oct 2026 03:08:45 +0000"
+git push origin main
+
+## Verify
+Visit: https://thenotarygiant.github.io/notary-update/feed.xml
+Footer on homepage should show Subscribe via RSS
+
+## To add new posts later
+Edit feed.xml and add a new <item> at top, then push again.
