@@ -1,11 +1,26 @@
 
-export default function Page() {
+import Link from "next/link";
+import { Button } from "@/components/ui/Button";
+
+export default function Post() {
   return (
-    <main style={maxWidth: '800px', margin: '0 auto', padding: '40px 20px'}>
-      <a href="/blog">← Back to Blog</a>
-      <h1 style={fontSize: '28px', fontWeight: 'bold', marginTop: '16px'}>Loan Signing Tips</h1>
-      <p style={marginTop: '16px'}>Full guide for loan-signing-tips coming soon. This page is live at /blog/loan-signing-tips</p>
-      <p style={marginTop: '16px'}><a href="/feed.xml" style={color: '#ea580c', fontWeight: 600}>Subscribe via RSS</a></p>
-    </main>
+    <div className="workspace-page">
+      <header className="page-head">
+        <div>
+          <p className="kicker">Blog</p>
+          <h1 className="headline">Loan Signing Tips for NYC Real Estate Closings</h1>
+          <p className="reading">Tips for co-op and condo closings.</p>
+        </div>
+        <Button intent="learn" href="/blog">Back to Blog</Button>
+      </header>
+      <section className="panel panel--wide">
+        <div className="reading">
+          
+      <p>Confirm time and place, bring ID, and ensure all parties are available. Loan signing agents keep co-op and condo closings on schedule for lenders, title companies, and attorneys.</p>
+
+          <p style={marginTop: '24px'}><Link href="/blog" style={textDecoration: 'underline'}>← Back to all posts</Link> | <Link href="/feed.xml" style={textDecoration: 'underline', color: '#ea580c'}> RSS Feed</Link></p>
+        </div>
+      </section>
+    </div>
   );
 }

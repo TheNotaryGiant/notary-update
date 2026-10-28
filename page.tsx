@@ -65,11 +65,6 @@ export default function Home() {
             <Button intent="call" size="lg">
               Call {site.phoneDisplay}
             </Button>
-            <Link href="/blog" style={{marginLeft: '8px'}}>
-              <Button intent="learn" size="lg">
-                Blog
-              </Button>
-            </Link>
           </div>
         </div>
         <div className="saas-hero__media">
