@@ -1,0 +1,1 @@
+export default function Post(){return <div style={{maxWidth:760,margin:"0 auto",padding:"80px 24px",fontFamily:"system-ui"}}><a href="/blog">← Blog</a><h1>Loan Signing Tips</h1><div>1. 2 IDs<br/>2. No new credit<br/>3. Review docs<br/>4. Names match<br/><br/>(646) 423-6255</div><p><a href="/">Home</a></p></div>}

@@ -1,0 +1,1 @@
+export default function Post(){return <div style={{maxWidth:760,margin:"0 auto",padding:"80px 24px",fontFamily:"system-ui"}}><a href="/blog">← Blog</a><h1>Apostille Checklist NYC</h1><div>1. Notarize<br/>2. County Clerk<br/>3. Dept of State<br/><br/>We handle full chain.</div><p><a href="/">Home</a></p></div>}
