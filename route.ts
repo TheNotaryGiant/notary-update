@@ -7,8 +7,8 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
     <description><![CDATA[Precision, speed, and care - wherever the documents are. Commissioned New York mobile notary services across NYC and Nassau County.]]></description>
     <language>en-us</language>
     <copyright>Copyright 2026 The Notary Giant Professional Service Corporation</copyright>
-    <lastBuildDate>Wed, 29 Oct 2026 02:00:00 +0000</lastBuildDate>
-    <pubDate>Wed, 29 Oct 2026 02:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 29 Oct 2026 03:00:00 +0000</lastBuildDate>
+    <pubDate>Wed, 29 Oct 2026 03:00:00 +0000</pubDate>
     <generator>the-notary-giant.vercel.app</generator>
     <atom:link href="https://www.thenotarygiant.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
@@ -48,7 +48,6 @@ export async function GET() {
     headers: {
       'Content-Type': 'application/rss+xml; charset=utf-8',
       'Access-Control-Allow-Origin': '*',
-      'Cache-Control': 'public, max-age=3600',
     },
   });
 }
