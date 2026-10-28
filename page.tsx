@@ -17,7 +17,7 @@ export default function Blog() {
         <article className="panel">
           <p className="kicker">Checklist</p>
           <h3 className="title">What to Bring to a Mobile Notary Appointment in NYC</h3>
-          <p className="reading">Complete checklist: unsigned document, valid photo ID, payment, and witnesses if needed. Same-day mobile notary available.</p>
+          <p className="reading">Complete checklist: unsigned document, valid photo ID, payment, and witnesses if needed.</p>
           <Button intent="learn" href="/blog/what-to-bring" size="sm">Read more</Button>
         </article>
         <article className="panel">
@@ -36,8 +36,8 @@ export default function Blog() {
 
       <section className="panel panel--wide">
         <p className="kicker">RSS</p>
-        <h3 className="title">Subscribe</h3>
-        <p className="reading">Get new posts: <Link href="/feed.xml" style={{textDecoration: 'underline', fontWeight: 600, color: '#ea580c'}}>/feed.xml</Link> — Works with Feedly, FeedReader, and any RSS reader.</p>
+        <h3 className="title">Subscribe via RSS</h3>
+        <p className="reading"><Link href="/feed.xml" style={{textDecoration: 'underline', fontWeight: 600, color: '#ea580c'}}>/feed.xml</Link> — Works with Feedly and FeedReader.</p>
       </section>
     </div>
   );

@@ -2,24 +2,42 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
-export default function Post() {
+export default function Blog() {
   return (
     <div className="workspace-page">
       <header className="page-head">
         <div>
-          <p className="kicker">Blog</p>
-          <h1 className="headline">Loan Signing Tips for NYC Real Estate Closings</h1>
-          <p className="reading">Tips for co-op and condo closings.</p>
+          <p className="kicker">Insights</p>
+          <h1 className="headline">Blog</h1>
+          <p className="reading">Helpful guides from The Notary Giant for clients across NYC and Nassau County.</p>
         </div>
-        <Button intent="learn" href="/blog">Back to Blog</Button>
       </header>
-      <section className="panel panel--wide">
-        <div className="reading">
-          
-      <p>Confirm time and place, bring ID, and ensure all parties are available. Loan signing agents keep co-op and condo closings on schedule for lenders, title companies, and attorneys.</p>
 
-          <p style={marginTop: '24px'}><Link href="/blog" style={textDecoration: 'underline'}>← Back to all posts</Link> | <Link href="/feed.xml" style={textDecoration: 'underline', color: '#ea580c'}> RSS Feed</Link></p>
-        </div>
+      <section className="card-grid">
+        <article className="panel">
+          <p className="kicker">Checklist</p>
+          <h3 className="title">What to Bring to a Mobile Notary Appointment in NYC</h3>
+          <p className="reading">Complete checklist: unsigned document, valid photo ID, payment, and witnesses if needed.</p>
+          <Button intent="learn" href="/blog/what-to-bring" size="sm">Read more</Button>
+        </article>
+        <article className="panel">
+          <p className="kicker">International</p>
+          <h3 className="title">Apostille Checklist: Documents Going Outside the U.S.</h3>
+          <p className="reading">How to prepare documents for apostille after notarization.</p>
+          <Button intent="learn" href="/blog/apostille-checklist" size="sm">Read more</Button>
+        </article>
+        <article className="panel">
+          <p className="kicker">Closings</p>
+          <h3 className="title">Loan Signing Tips for NYC Real Estate Closings</h3>
+          <p className="reading">Tips for co-op and condo closings in NYC.</p>
+          <Button intent="learn" href="/blog/loan-signing-tips" size="sm">Read more</Button>
+        </article>
+      </section>
+
+      <section className="panel panel--wide">
+        <p className="kicker">RSS</p>
+        <h3 className="title">Subscribe via RSS</h3>
+        <p className="reading"><Link href="/feed.xml" style={{textDecoration: 'underline', fontWeight: 600, color: '#ea580c'}}>/feed.xml</Link> — Works with Feedly and FeedReader.</p>
       </section>
     </div>
   );

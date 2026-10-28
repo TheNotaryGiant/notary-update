@@ -19,36 +19,27 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
       <title>What to Bring to a Mobile Notary Appointment in NYC</title>
       <link>https://www.thenotarygiant.com/blog/what-to-bring</link>
       <guid isPermaLink="true">https://www.thenotarygiant.com/blog/what-to-bring</guid>
-      <description><![CDATA[Complete checklist for NYC mobile notary appointments: unsigned document, valid photo ID, payment, witnesses if needed. Same-day mobile notary available across NYC and Nassau County.]]></description>
+      <description><![CDATA[Complete checklist for NYC mobile notary appointments.]]></description>
       <pubDate>Wed, 29 Oct 2026 03:30:00 +0000</pubDate>
-      <category>Tips</category>
     </item>
     <item>
       <title>Apostille Checklist: Documents Going Outside the U.S.</title>
       <link>https://www.thenotarygiant.com/blog/apostille-checklist</link>
       <guid isPermaLink="true">https://www.thenotarygiant.com/blog/apostille-checklist</guid>
-      <description><![CDATA[How to prepare documents for apostille after notarization - county clerk certification, state apostille, and what The Notary Giant coordinates.]]></description>
+      <description><![CDATA[How to prepare documents for apostille after notarization.]]></description>
       <pubDate>Wed, 29 Oct 2026 03:30:00 +0000</pubDate>
-      <category>International</category>
     </item>
     <item>
       <title>Loan Signing Tips for NYC Real Estate Closings</title>
       <link>https://www.thenotarygiant.com/blog/loan-signing-tips</link>
       <guid isPermaLink="true">https://www.thenotarygiant.com/blog/loan-signing-tips</guid>
-      <description><![CDATA[Tips for co-op and condo closings in NYC - confirming time and place, ID requirements, and how loan signing agents keep closings on schedule.]]></description>
+      <description><![CDATA[Tips for co-op and condo closings in NYC.]]></description>
       <pubDate>Wed, 29 Oct 2026 03:30:00 +0000</pubDate>
-      <category>Closings</category>
     </item>
   </channel>
 </rss>
 `;
 export async function GET() {
-  return new NextResponse(xml, {
-    headers: {
-      'Content-Type': 'application/rss+xml; charset=utf-8',
-      'Access-Control-Allow-Origin': '*',
-      'Cache-Control': 'public, max-age=3600',
-    },
-  });
+  return new NextResponse(xml, { headers: { 'Content-Type': 'application/rss+xml; charset=utf-8', 'Access-Control-Allow-Origin': '*' }});
 }
 export const dynamic = 'force-static';

@@ -1,7 +1,6 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
-
 export default function Post() {
   return (
     <div className="workspace-page">
@@ -9,7 +8,6 @@ export default function Post() {
         <div>
           <p className="kicker">Blog</p>
           <h1 className="headline">Loan Signing Tips for NYC Real Estate Closings</h1>
-          <p className="reading">Tips for co-op and condo closings in NYC.</p>
         </div>
         <Button intent="learn" href="/blog">← Back to Blog</Button>
       </header>
