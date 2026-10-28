@@ -1,20 +1,23 @@
-export default function Page() {
+export default function BlogPage() {
+  const posts = [
+    { slug: 'what-to-bring', title: 'What to Bring to a Mobile Notary Appointment in NYC', excerpt: 'Complete checklist: unsigned document, valid photo ID, payment, and witnesses if needed.' },
+    { slug: 'apostille-checklist', title: 'Apostille Checklist: Documents Going Outside the U.S.', excerpt: 'How to prepare documents for apostille after notarization.' },
+    { slug: 'loan-signing-tips', title: 'Loan Signing Tips for NYC Real Estate Closings', excerpt: 'Tips for co-op and condo closings in NYC.' },
+  ];
   return (
     <main style={{padding: '40px 20px', maxWidth: '800px', margin: '0 auto', fontFamily: 'system-ui, sans-serif', lineHeight: '1.7'}}>
       <a href="/" style={{color: '#1e40af', textDecoration: 'none'}}>← Back to Home</a>
-      <h1 style={{fontSize: '36px', marginTop: '20px'}}>What to Bring to a Mobile Notary Appointment in NYC</h1>
-      <p style={{color: '#666'}}><em>Posted on October 28, 2026 • 3 min read</em></p>
-      <hr style={{margin: '20px 0'}}/>
-      <p>A mobile notary comes to you, but you still need to be prepared. Here's what to have ready before we arrive in Manhattan, Brooklyn, Queens, Bronx, Staten Island, or Nassau County:</p>
-      <h2>1. Your Complete Document - Unsigned</h2>
-      <p>Do not sign beforehand if the document says you must sign in the notary's presence. Bring every page. If it's a closing package, confirm with your attorney or title company which pages need notarization.</p>
-      <h2>2. Valid Photo ID</h2>
-      <p>New York requires a current government-issued ID: driver's license, passport, or state ID. The name must match the document. Expired IDs are not accepted.</p>
-      <h2>3. Payment</h2>
-      <p>We accept Zelle, major cards, and cash. Confirm the fee when you book.</p>
-      <h2>4. Witnesses (if needed)</h2>
-      <p>Some deeds and wills need witnesses in addition to the notary. Tell us when you book so we can advise.</p>
-      <p style={{background: '#f1f5f9', padding: '16px', borderRadius: '8px', marginTop: '30px'}}><strong>Need a mobile notary today?</strong> Call (646) 423-6350 or book online at thenotarygiant.com. Same-day appointments often available.</p>
+      <h1 style={{fontSize: '42px', marginTop: '20px'}}>Blog</h1>
+      <p style={{color: '#666'}}>Helpful guides from The Notary Giant - New York mobile notary services.</p>
+      <hr style={{margin: '30px 0'}}/>
+      {posts.map(post => (
+        <div key={post.slug} style={{marginBottom: '32px', border: '1px solid #e2e8f0', padding: '20px', borderRadius: '12px'}}>
+          <h2 style={{margin: '0 0 8px', fontSize: '22px'}}><a href={`/blog/${post.slug}`} style={{color: '#1e40af', textDecoration: 'none'}}>{post.title}</a></h2>
+          <p style={{color: '#475569', margin: '0 0 12px'}}>{post.excerpt}</p>
+          <a href={`/blog/${post.slug}`} style={{color: '#1e40af', fontWeight: 'bold'}}>Read more →</a>
+        </div>
+      ))}
+      <p style={{marginTop: '40px'}}><a href="/feed.xml" style={{color: '#1e40af'}}>📡 RSS Feed: thenotarygiant.com/feed.xml</a></p>
     </main>
   );
 }
