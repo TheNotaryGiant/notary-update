@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-
 const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -46,16 +45,13 @@ const feed = `<?xml version="1.0" encoding="UTF-8"?>
   </channel>
 </rss>
 `;
-
 export async function GET() {
   return new NextResponse(feed, {
     status: 200,
     headers: {
       'Content-Type': 'application/rss+xml; charset=utf-8',
       'Access-Control-Allow-Origin': '*',
-      'Cache-Control': 'public, max-age=3600',
     },
   });
 }
-
 export const dynamic = 'force-static';
