@@ -1,1 +1,0 @@
-export default function Post(){return <div style={{maxWidth:760,margin:"0 auto",padding:"80px 24px",fontFamily:"system-ui"}}><a href="/blog">← Blog</a><h1>What to Bring to a Notary Appointment in NYC</h1><div>1. Valid ID<br/>2. Complete doc - don't sign early<br/>3. Instructions<br/>4. Payment<br/><br/>Same-day NYC.</div><p><a href="/">Home</a></p></div>}
