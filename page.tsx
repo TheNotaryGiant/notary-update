@@ -1,3 +1,47 @@
-export default function Blog(){
-return <div style={{maxWidth:900,margin:"0 auto",padding:"80px 24px",fontFamily:"system-ui"}}><h1 style={{fontSize:42,fontWeight:800}}>Blog</h1><p>Guides from The Notary Giant.</p><ul style={{lineHeight:2.5}}><li><a href="/blog/what-to-bring">What to Bring to a Notary Appointment</a></li><li><a href="/blog/apostille-checklist">Apostille Checklist</a></li><li><a href="/blog/loan-signing-tips">Loan Signing Tips</a></li></ul><p><a href="/">← Home</a></p></div>
+export const metadata = {
+  title: "Blog | The Notary Giant",
+  description:
+    "Insights from The Notary Giant, a New York notary service serving the five boroughs and Nassau County.",
+};
+
+export default function BlogPage() {
+  return (
+    <main>
+      <h1>Blog</h1>
+      <p>
+        Insights from The Notary Giant, a New York notary service serving
+        the five boroughs and Nassau County.
+      </p>
+
+      <section>
+        <h2>What to bring to a notary appointment</h2>
+        <p>
+          Bring a valid, unexpired photo ID and the complete, unsigned
+          document. Do not sign the document before the appointment — the
+          notary must witness your signature.
+        </p>
+      </section>
+
+      <section>
+        <h2>Mobile notary services</h2>
+        <p>
+          A mobile notary can meet you at your home, office, or another
+          convenient location, instead of you travelling to an office.
+        </p>
+      </section>
+
+      <section>
+        <h2>Apostille assistance</h2>
+        <p>
+          Apostille authentication certifies a document for use abroad.
+          Ask us about the steps and timing for the document you need
+          authenticated.
+        </p>
+      </section>
+
+      <p>
+        <a href="/contact">Contact us</a> to book a notary appointment.
+      </p>
+    </main>
+  );
 }
